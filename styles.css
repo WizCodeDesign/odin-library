@@ -5,5 +5,69 @@ body {
     margin: 0;
     box-sizing: border-box;
     background-image: url('../odin-library/resources/images/shelf.jpg');
-    background-size: 100vw 100vh;
+    background-size: 100vw 400vh;
+}
+
+.header_container {
+    text-align: center;
+    color: white;
+}
+
+.shelf_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.book_cover {
+    /*width: 155px;
+    height: 450px;
+    margin-left: 25px;
+    margin-top: 100px;*/
+    width: 9.5rem;
+    height: 28rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    border-left: #333 2px solid;
+    border-right: #333 2px solid;
+    background-color: #63350b;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.book_cover p {
+    margin: 0;
+    padding: 0.5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    text-decoration: underline;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+    word-spacing: 0.5rem;
+}
+
+.book_cover:hover {
+    transform: scale(1.25);
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 0 9px white;
 }
