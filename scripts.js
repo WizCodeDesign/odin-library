@@ -44,3 +44,56 @@ function clearLibraryShelf() {
 //A code example from copilot to add books to a library shelf in HTML,
 Can be used when I am stuck or neet a reminder.
 */
+
+var id = 0;
+
+const form = document.querySelector(".book_form");
+
+form.addEventListener("submit", async (event) => {
+    event.preventDefault(); 
+    const formData = new FormData(form);
+    const book_title = formData.get("book_title");
+    const pages = formData.get("pages");
+    const read_status = formData.get("read_status");
+    addBookToLibrary(book_title, pages, read_status);
+})
+
+function addBookToLibrary (title, pages, read_status){
+    if(id <= 8) {
+    const book = {
+        
+        id: ++id,
+        title: title,
+        pages: pages,
+        read_status: read_status,
+    }
+        const bookDiv = document.createElement("div");
+        bookDiv.className = "book";
+        bookDiv.dataset.id = book.id;
+        const libraryShelf = document.getElementsByClassName("shelf_container");
+        libraryShelf[0].appendChild(bookDiv);
+        bookDiv.innerHTML = `
+            <div class="book_cover"><p>${book.title}</p></div>
+        `;
+    }
+    else {
+        alert("You have reached the maximum number of books in your library.");
+    }
+    form.reset(); // Reset the form after submission
+}
+
+
+// Function to clear the library shelf
+function clearLibraryShelf() {
+    const libraryShelf = document.getElementsByClassName("shelf_container");
+    libraryShelf[0].innerHTML = '';
+    id = 0; // Reset the id counter
+    alert("Library shelf cleared.");
+    form.reset(); // Reset the form after clearing the shelf
+}
+
+form.addEventListener("reset", async (event) => { 
+    form.reset(); // Reset the form fields
+})
+
+

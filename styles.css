@@ -10,7 +10,41 @@ body {
 
 .header_container {
     text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.header_container button {
+    background-color: #63350b;
     color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 1rem;
+    
+}
+
+.header_container button:hover {
+    background-color: white;
+    color: black;
+}
+
+.header_container svg {
+    width: 2rem;
+    height: 2rem;
+    vertical-align: middle;
+    margin: 0.5rem;
+    fill: #333;
+}
+
+.header_container input:hover, input:focus, select:hover {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #63350b;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
 .shelf_container {
