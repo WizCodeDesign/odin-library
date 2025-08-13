@@ -82,7 +82,6 @@ function addBookToLibrary (title, pages, read_status){
     form.reset(); // Reset the form after submission
 }
 
-
 // Function to clear the library shelf
 function clearLibraryShelf() {
     const libraryShelf = document.getElementsByClassName("shelf_container");
